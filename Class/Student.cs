@@ -25,14 +25,14 @@ namespace Class
             Surname = surname;
             Point = point;
             Group = group;
-
+            
             if (Point < 65)
             { 
                 IsGraduated = false;
             }
             else
             {
-                IsGraduated = true;
+                IsGraduated = true;       
             }
         }        
         //metodlar
