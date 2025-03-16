@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Student telebe = new Student("Gulyana", "Xelilova", 88, "BB104", true);
+            Student telebe = new Student("Gulyana", "Xelilova", 88, "BB104");
             telebe.GetInfo();
             telebe.ChechGraduation();
             telebe.GetDiplomDegree();

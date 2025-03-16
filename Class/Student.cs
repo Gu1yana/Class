@@ -18,18 +18,23 @@ namespace Class
         public string Group;
         public byte Point;
         public bool IsGraduated;
-
         //constructor
-        public Student(string name, string surname, byte point, string group, bool isgraduated)
+        public Student(string name, string surname, byte point, string group)
         {
             Name = name;
             Surname = surname;
             Point = point;
             Group = group;
-            IsGraduated = isgraduated;
-        }
-         
-        
+
+            if (Point < 65)
+            { 
+                IsGraduated = false;
+            }
+            else
+            {
+                IsGraduated = true;
+            }
+        }        
         //metodlar
         public void GetInfo()
         {
@@ -37,7 +42,6 @@ namespace Class
             Console.WriteLine($"Soyad:{Surname}");
             Console.WriteLine($"Bal:{Point}");
             Console.WriteLine($"Qrup:{Group}");
-            Console.WriteLine($"Graduated: {(IsGraduated ? "Yes" : "No")}");
         }
         public void ChechGraduation()
         {
@@ -69,6 +73,5 @@ namespace Class
                 Console.WriteLine("Diplomu yoxdur");
             }
         }
-
     }
 }
